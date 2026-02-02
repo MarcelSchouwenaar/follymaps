@@ -1,6 +1,6 @@
-# eleventy-base-blog v9
+# Follymaps
 
-A starter repository showing how to build a blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://github.com/11ty/eleventy/releases/tag/v3.0.0)).
+A geolocation-focused website theme built with [Eleventy](https://www.11ty.dev/) and integrated with [PagesCMS](https://pagescms.com/) for content management. Follymaps allows you to create beautiful websites displaying geolocation maps, inspired by Follywood (www.follywood.nl).
 
 ## Getting Started
 
@@ -45,9 +45,91 @@ Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the
 
 ## Features
 
-- Using [Eleventy v3](https://github.com/11ty/eleventy/releases/tag/v3.0.0) with zero-JavaScript output.
-	- Content is exclusively pre-rendered (this is a static site).
-	- Can easily [deploy to a subfolder without changing any content](https://www.11ty.dev/docs/plugins/html-base/)
+- **11ty-powered**: Built with Eleventy v3 for fast, static site generation
+- **PagesCMS Integration**: User-friendly content management system
+- **Geolocation Maps**: Custom fields and templates for displaying location-based content
+- **GitHub Pages Ready**: Configured for easy deployment to GitHub Pages
+- **Zero-JavaScript Output**: Content is exclusively pre-rendered for optimal performance
+- **Responsive Design**: Mobile-first approach ensuring great user experience on all devices
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (see `.nvmrc` for recommended version)
+- npm or yarn package manager
+- Git
+
+### Quick Start
+
+1. **Clone and setup**:
+
+```bash
+git clone <your-repo-url> follymaps
+cd follymaps
+./setup.sh
+```
+
+2. **Start developing**:
+
+```bash
+npm start
+```
+
+3. **Set up PagesCMS** (for content management):
+
+See [docs/PAGESCMS_SETUP.md](docs/PAGESCMS_SETUP.md) for detailed instructions.
+
+### Manual Installation
+
+If you prefer manual setup:
+
+1. **Clone this repository**:
+
+```bash
+git clone <your-repo-url> follymaps
+cd follymaps
+```
+
+2. **Install dependencies**:
+
+```bash
+npm install
+```
+
+3. **Configure your site** by editing `_data/metadata.js`
+
+4. **Start the development server**:
+
+```bash
+npm start
+```
+
+5. **Build for production**:
+
+```bash
+npm run build
+```
+
+### GitHub Pages Setup
+
+This site is configured to work with GitHub Pages. The `.nojekyll` file ensures that GitHub Pages serves the site correctly without Jekyll processing.
+
+### PagesCMS Setup
+
+To set up PagesCMS for content management:
+
+1. Visit [PagesCMS.com](https://pagescms.com/) and connect your GitHub repository
+2. Configure the custom geolocation field (see documentation below)
+3. Start creating content with location data
+
+## Architecture
+
+- **11ty Templates**: Located in `_includes/` and content folders
+- **Content Management**: Via PagesCMS with custom geolocation fields
+- **Styling**: CSS files in `css/` folder
+- **Static Assets**: Public files in `public/`
+- **Configuration**: Main config in `eleventy.config.js`
 	- All URLs are decoupled from the content’s location on the file system.
 	- Configure templates via the [Eleventy Data Cascade](https://www.11ty.dev/docs/data-cascade/)
 - **Performance focused**: four-hundos Lighthouse score out of the box!

@@ -1,0 +1,206 @@
+# PagesCMS Configuration for Follymaps
+# This file configures the content management system for the Follymaps geolocation website
+
+# Media configuration - for images, maps, and other assets
+media:
+  input: "public/media"
+  output: "/media"
+
+# Content configuration - define content types for the website
+content:
+  # Blog posts with geolocation data
+  - name: "posts"
+    label: "Posts"
+    type: "collection"
+    input: "content/posts"
+    extension: "md"
+    format: "yaml-frontmatter"
+    fields:
+      - name: "title"
+        type: "string"
+        label: "Title"
+        required: true
+      - name: "description"
+        type: "text"
+        label: "Description"
+        required: true
+      - name: "date"
+        type: "date"
+        label: "Date"
+        required: true
+        options:
+          format: "YYYY-MM-DD"
+      - name: "location"
+        type: "object"
+        label: "Location"
+        required: true
+        fields:
+          - name: "name"
+            type: "string"
+            label: "Location Name"
+            required: true
+          - name: "latitude"
+            type: "number"
+            label: "Latitude"
+            required: true
+            options:
+              min: -90
+              max: 90
+              step: 0.000001
+          - name: "longitude"
+            type: "number"
+            label: "Longitude"
+            required: true
+            options:
+              min: -180
+              max: 180
+              step: 0.000001
+          - name: "address"
+            type: "text"
+            label: "Address"
+            required: false
+          - name: "zoom"
+            type: "number"
+            label: "Map Zoom Level"
+            required: false
+            options:
+              min: 1
+              max: 20
+              default: 15
+      - name: "image"
+        type: "image"
+        label: "Featured Image"
+        required: false
+      - name: "tags"
+        type: "string"
+        label: "Tags"
+        list: true
+        required: false
+      - name: "body"
+        type: "rich-text"
+        label: "Content"
+        required: true
+        
+  # Pages for static content
+  - name: "pages"
+    label: "Pages"
+    type: "collection"
+    input: "content/pages"
+    extension: "md"
+    format: "yaml-frontmatter"
+    fields:
+      - name: "title"
+        type: "string"
+        label: "Title"
+        required: true
+      - name: "description"
+        type: "text"
+        label: "Description"
+        required: false
+      - name: "permalink"
+        type: "string"
+        label: "Permalink"
+        required: false
+      - name: "layout"
+        type: "select"
+        label: "Layout"
+        required: false
+        options:
+          - "layouts/base.njk"
+          - "layouts/home.njk"
+          - "layouts/post.njk"
+        default: "layouts/base.njk"
+      - name: "body"
+        type: "rich-text"
+        label: "Content"
+        required: true
+
+  # Map collections - for curated map collections
+  - name: "maps"
+    label: "Map Collections"
+    type: "collection"
+    input: "content/maps"
+    extension: "md"
+    format: "yaml-frontmatter"
+    fields:
+      - name: "title"
+        type: "string"
+        label: "Collection Title"
+        required: true
+      - name: "description"
+        type: "text"
+        label: "Description"
+        required: true
+      - name: "locations"
+        type: "object"
+        label: "Locations"
+        list: true
+        required: true
+        fields:
+          - name: "name"
+            type: "string"
+            label: "Location Name"
+            required: true
+          - name: "latitude"
+            type: "number"
+            label: "Latitude"
+            required: true
+            options:
+              min: -90
+              max: 90
+              step: 0.000001
+          - name: "longitude"
+            type: "number"
+            label: "Longitude"
+            required: true
+            options:
+              min: -180
+              max: 180
+              step: 0.000001
+          - name: "description"
+            type: "text"
+            label: "Location Description"
+            required: false
+          - name: "image"
+            type: "image"
+            label: "Location Image"
+            required: false
+      - name: "center"
+        type: "object"
+        label: "Map Center"
+        required: false
+        fields:
+          - name: "latitude"
+            type: "number"
+            label: "Center Latitude"
+            required: true
+            options:
+              min: -90
+              max: 90
+              step: 0.000001
+          - name: "longitude"
+            type: "number"
+            label: "Center Longitude"
+            required: true
+            options:
+              min: -180
+              max: 180
+              step: 0.000001
+          - name: "zoom"
+            type: "number"
+            label: "Default Zoom"
+            required: false
+            options:
+              min: 1
+              max: 20
+              default: 10
+      - name: "body"
+        type: "rich-text"
+        label: "Content"
+        required: false
+
+# Site settings
+settings:
+  hide: false
+  content:
+    merge: true

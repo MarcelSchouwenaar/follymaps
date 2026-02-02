@@ -1,11 +1,11 @@
 export default {
-	title: "Eleventy Base Blog v9",
-	url: "https://example.com/",
+	title: "Follymaps",
+	url: "https://follymaps.github.io/",
 	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	description: "A geolocation-focused website theme for displaying beautiful maps and location-based content.",
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
+		name: "Follymaps",
+		email: "info@follymaps.com",
+		url: "https://follymaps.github.io/about/"
 	}
 }
