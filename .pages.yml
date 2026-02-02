@@ -42,15 +42,40 @@ content:
       - { name: layout, label: Layout, type: string, default: layouts/base.njk }
       - { name: body, label: Body, type: rich-text }
       
+  # System Pages (archive, tags)
+  - name: archive
+    label: Archive Page
+    type: file
+    path: content/archive.md
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: layout, label: Layout, type: string, default: layouts/archive.njk }
+      - { name: body, label: Body, type: rich-text }
+      
+  - name: tags
+    label: Tags Page
+    type: file
+    path: content/tags.md
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: layout, label: Layout, type: string, default: layouts/tags.njk }
+      - { name: body, label: Body, type: rich-text }
+      
+  - name: home
+    label: Home Page
+    type: file
+    path: content/index.md
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: description, label: Description, type: string }
+      - { name: layout, label: Layout, type: string, default: layouts/home.njk }
+      - { name: body, label: Body, type: rich-text }
+      
   # Site Metadata
   - name: metadata
     label: Site Settings
-    type: file
-    path: _data/metadata.js
-    format: code
-      
-  - name: metadata
-    label: Metadata
     type: file
     path: _data/metadata.js
     format: code
