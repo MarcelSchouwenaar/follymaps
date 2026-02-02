@@ -5,7 +5,7 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/follymaps/feed/feed.xml" rel="self" />
   <link href="https://example.com/follymaps/" />
-  <updated>2026-02-02T10:29:24Z</updated>
+  <updated>2026-02-02T10:29:40Z</updated>
   <id>https://example.com/follymaps/</id>
   <author>
     <name>Your Name</name>
@@ -13,7 +13,7 @@
   <entry>
     <title>All Locations</title>
     <link href="https://example.com/follymaps/locations/" />
-    <updated>2026-02-02T10:29:24Z</updated>
+    <updated>2026-02-02T10:29:40Z</updated>
     <id>https://example.com/follymaps/locations/</id>
     <content type="html">&lt;p&gt;Explore all the locations we&#39;ve featured, from hidden gems to popular destinations. Each location includes detailed information and precise coordinates to help you plan your visit.&lt;/p&gt;
 </content>
