@@ -7,7 +7,7 @@ layout: "layouts/base.njk"
 
 # About Follymaps
 
-Follymaps is a modern, geolocation-focused website theme built with [Eleventy](https://www.11ty.dev/) and integrated with [PagesCMS](https://pagescms.com/) for seamless content management.
+Hello, world! Follymaps is a modern, geolocation-focused website theme built with [Eleventy](https://www.11ty.dev/) and integrated with [PagesCMS](https://pagescms.com/) for seamless content management.
 
 ## What Makes Follymaps Special?
 
