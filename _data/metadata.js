@@ -5,7 +5,7 @@ export default {
 	description: "A geolocation-focused website theme for displaying beautiful maps and location-based content.",
 	author: {
 		name: "Marcel Schouwenaar",
-		email: "marcel@schouwenaar.email",
+		email: "info@marcelschouwenaar.nl",
 		url: "https://marcelschouwenaar.github.io/follymaps/about/"
 	}
 }
