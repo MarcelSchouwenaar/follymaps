@@ -6,21 +6,21 @@
 	"scripts": {
 		"build": "npx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
-		"build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/follymaps/",
 		"start": "npx @11ty/eleventy --serve --quiet",
-		"start-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
+		"start-ghpages": "npx @11ty/eleventy --pathprefix=/follymaps/ --serve --quiet",
 		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/follymaps/follymaps-pagescms.git"
+		"url": "https://github.com/MarcelSchouwenaar/follymaps.git"
 	},
 	"author": {
-		"name": "Follymaps",
-		"email": "info@follymaps.com",
-		"url": "https://follymaps.github.io/"
+		"name": "Marcel Schouwenaar",
+		"email": "marcel@schouwenaar.email",
+		"url": "https://marcelschouwenaar.github.io/follymaps/"
 	},
 	"license": "MIT",
 	"engines": {
@@ -30,10 +30,6 @@
 		"type": "opencollective",
 		"url": "https://opencollective.com/11ty"
 	},
-	"bugs": {
-		"url": "https://github.com/11ty/eleventy-base-blog/issues"
-	},
-	"homepage": "https://github.com/11ty/eleventy-base-blog#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-img": "^6.0.4",

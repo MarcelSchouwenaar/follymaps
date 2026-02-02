@@ -1,11 +1,11 @@
 export default {
 	title: "Follymaps",
-	url: "https://follymaps.github.io/",
+	url: "https://marcelschouwenaar.github.io/follymaps/",
 	language: "en",
 	description: "A geolocation-focused website theme for displaying beautiful maps and location-based content.",
 	author: {
-		name: "Follymaps",
-		email: "info@follymaps.com",
-		url: "https://follymaps.github.io/about/"
+		name: "Marcel Schouwenaar",
+		email: "marcel@schouwenaar.email",
+		url: "https://marcelschouwenaar.github.io/follymaps/about/"
 	}
 }
