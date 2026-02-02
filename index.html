@@ -3,9 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Follymaps</title>
-		<meta name="description" content="A geolocation-focused website theme for displaying beautiful maps and location-based content.">
-		<link rel="alternate" href="/follymaps/feed/feed.xml" type="application/atom+xml" title="Follymaps">
+		<title>Welcome to Follymaps</title>
+		<meta name="description" content="Discover amazing locations with our geolocation-focused website">
 		
 		
 		
@@ -306,24 +305,6 @@ header {
 }
 .post-metadata time {
 	margin-right: 1em;
-}
-/* Message Box */
-.message-box {
-	--color-message-box: #ffc;
-
-	display: block;
-	background-color: var(--color-message-box);
-	color: var(--color-gray-90);
-	padding: 1em 0.625em; /* 16px 10px /16 */
-}
-.message-box ol {
-	margin-top: 0;
-}
-
-@media (prefers-color-scheme: dark) {
-	.message-box {
-		--color-message-box: #082840;
-	}
 }</style>
 		
 	</head>
@@ -336,7 +317,7 @@ header {
 				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 				<ul class="nav">
 					<li class="nav-item"><a href="/follymaps/" aria-current="page">Home</a></li>
-					<li class="nav-item"><a href="/follymaps/blog/">Archive</a></li>
+					<li class="nav-item"><a href="/follymaps/archive/">Archive</a></li>
 					<li class="nav-item"><a href="/follymaps/feed/feed.xml">Feed</a></li>
 				</ul>
 			</nav>
@@ -344,110 +325,105 @@ header {
 
 		<main id="main">
 			<heading-anchors>
-				<!-- Delete this block, which will also remove the component CSS from the bundle -->
+				<h1 id="welcome-to-follymaps">Welcome to Follymaps</h1>
 
-<div class="message-box">
-	<ol>
-		<li>Edit <code>_data/metadata.js</code> with your blog’s information.</li>
-		<li>(Optional) Edit <code>eleventy.config.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-		<li>Delete this message from <code>_includes/layouts/home.njk</code>.</li>
-	</ol>
-	<p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
+<p>Welcome to <strong>Follymaps</strong> – your guide to discovering and sharing amazing locations around the world!</p>
+<p>This site showcases beautiful places with detailed geolocation information, making it easy to find and explore new destinations.</p>
+
+
+
+
+  
+  
+  <h2 id="latest-2-locations">Latest 2 Locations</h2>
+  
+  
+  
+  <div class="location-list">
+
+  <article class="location-preview">
+    <header>
+      <h2 id="beautiful-park-in-amsterdam">
+        <a href="/follymaps/locations/beautiful-park-in-amsterdam/">
+          
+            Beautiful Park in Amsterdam
+          
+        </a>
+      </h2>
+      
+        <p class="location-description">A stunning urban park perfect for relaxation and outdoor activities</p>
+      
+      
+      
+        <div class="location-info">
+          
+            <p class="location-name"><strong>Vondelpark</strong></p>
+          
+          
+            <p class="location-address">📍 Vondelpark, Amsterdam, Netherlands</p>
+          
+        </div>
+      
+      
+      <time datetime="2026-02-02">02 February 2026</time>
+    </header>
+    
+    
+      <div class="location-tags">
+        
+          <a href="/follymaps/tags/locations/" class="tag">#locations</a>
+        
+          <a href="/follymaps/tags/parks/" class="tag">#parks</a>
+        
+          <a href="/follymaps/tags/amsterdam/" class="tag">#amsterdam</a>
+        
+          <a href="/follymaps/tags/nature/" class="tag">#nature</a>
+        
+      </div>
+    
+  </article>
+
+  <article class="location-preview">
+    <header>
+      <h2 id="all-locations">
+        <a href="/follymaps/locations/">
+          
+            All Locations
+          
+        </a>
+      </h2>
+      
+        <p class="location-description">Browse all the amazing locations featured on Follymaps</p>
+      
+      
+      
+      
+      <time datetime="2026-02-02">02 February 2026</time>
+    </header>
+    
+    
+      <div class="location-tags">
+        
+          <a href="/follymaps/tags/locations/" class="tag">#locations</a>
+        
+      </div>
+    
+  </article>
+
 </div>
-<!-- Stop deleting -->
-
-
-
-<h1 id="latest-2-locations">Latest 2 Locations</h1>
-
-
-
-<ol reversed="" class="locationslist" start="2">
-
-	<li class="locationslist-item">
-		<a href="/follymaps/locations/beautiful-park-in-amsterdam/" class="locationslist-link">
-			
-				Beautiful Park in Amsterdam
-			
-		</a>
-		
-		
-			<p class="locationslist-description">A stunning urban park perfect for relaxation and outdoor activities</p>
-		
-		
-		
-			<div class="locationslist-location-info">
-				
-					<span class="locationslist-location-name">Vondelpark</span>
-				
-				
-					<span class="locationslist-address">📍 Vondelpark, Amsterdam, Netherlands</span>
-				
-			</div>
-		
-		
-		<time class="locationslist-date" datetime="2026-02-02">
-			02 February 2026
-		</time>
-		
-		
-			<div class="locationslist-tags">
-				
-					<a href="/follymaps/tags/locations/" class="tag">#locations</a>
-				
-					<a href="/follymaps/tags/parks/" class="tag">#parks</a>
-				
-					<a href="/follymaps/tags/amsterdam/" class="tag">#amsterdam</a>
-				
-					<a href="/follymaps/tags/nature/" class="tag">#nature</a>
-				
-			</div>
-		
-	</li>
-
-	<li class="locationslist-item">
-		<a href="/follymaps/locations/" class="locationslist-link">
-			
-				<code>/locations/</code>
-			
-		</a>
-		
-		
-		
-		
-		
-		<time class="locationslist-date" datetime="2026-02-02">
-			02 February 2026
-		</time>
-		
-		
-			<div class="locationslist-tags">
-				
-					<a href="/follymaps/tags/locations/" class="tag">#locations</a>
-				
-			</div>
-		
-	</li>
-
-</ol>
-
-
-
-
-
-
+  
+  
+  
 
 
 			</heading-anchors>
 		</main>
 
 		<footer>
-			<p>
-				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
-			</p>
+			
 		</footer>
 
-		<!-- This page `/` was built on 2026-02-02T10:01:56.283Z -->
+		<!-- This page `/` was built on 2026-02-02T10:25:13.976Z -->
 		<script type="module" src="/follymaps/dist/cC8wS6ZjFU.js"></script>
 	</body>
 </html>
