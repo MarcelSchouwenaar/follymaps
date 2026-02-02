@@ -1,40 +1,41 @@
-<ol reversed class="locationslist" start="{{ locationslistCounter }}">
+<div class="location-list">
 {% for location in locationslist %}
-	<li class="locationslist-item">
-		<a href="{{ location.url }}" class="locationslist-link">
-			{% if location.data.title %}
-				{{ location.data.title }}
-			{% else %}
-				<code>{{ location.url }}</code>
-			{% endif %}
-		</a>
-		
-		{% if location.data.description %}
-			<p class="locationslist-description">{{ location.data.description }}</p>
-		{% endif %}
-		
-		{% if location.data.location %}
-			<div class="locationslist-location-info">
-				{% if location.data.location.name %}
-					<span class="locationslist-location-name">{{ location.data.location.name }}</span>
-				{% endif %}
-				{% if location.data.location.address %}
-					<span class="locationslist-address">📍 {{ location.data.location.address }}</span>
-				{% endif %}
-			</div>
-		{% endif %}
-		
-		<time class="locationslist-date" datetime="{{ location.date | htmlDateString }}">
-			{{ location.date | readableDate }}
-		</time>
-		
-		{% if location.data.tags %}
-			<div class="locationslist-tags">
-				{% for tag in location.data.tags %}
-					<a href="/tags/{{ tag | slugify }}/" class="tag">#{{ tag }}</a>
-				{% endfor %}
-			</div>
-		{% endif %}
-	</li>
+  <article class="location-preview">
+    <header>
+      <h2>
+        <a href="{{ location.url }}">
+          {% if location.data.title %}
+            {{ location.data.title }}
+          {% else %}
+            <code>{{ location.url }}</code>
+          {% endif %}
+        </a>
+      </h2>
+      {% if location.data.description %}
+        <p class="location-description">{{ location.data.description }}</p>
+      {% endif %}
+      
+      {% if location.data.location %}
+        <div class="location-info">
+          {% if location.data.location.name %}
+            <p class="location-name"><strong>{{ location.data.location.name }}</strong></p>
+          {% endif %}
+          {% if location.data.location.address %}
+            <p class="location-address">📍 {{ location.data.location.address }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+      
+      <time datetime="{{ location.date | htmlDateString }}">{{ location.date | readableDate }}</time>
+    </header>
+    
+    {% if location.data.tags %}
+      <div class="location-tags">
+        {% for tag in location.data.tags %}
+          <a href="/tags/{{ tag | slugify }}/" class="tag">#{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </article>
 {% endfor %}
-</ol>
+</div>

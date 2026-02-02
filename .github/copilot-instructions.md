@@ -43,3 +43,7 @@ To deploy and use your Follymaps website:
 2. Set up PagesCMS at https://app.pagescms.org
 3. Start creating content with location data
 4. Customize the 11ty templates to display maps and location information
+
+## Site structure
+- **Locations**: Entries with geolocation data
+- **Pages**: Static content pages
