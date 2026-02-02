@@ -4,29 +4,50 @@
 media: public/img
 
 content:
-  - name: posts
-    label: Posts
+  # Locations - main content type for places/locations with geolocation data
+  - name: locations
+    label: Locations
     type: collection
-    path: content/blog
+    path: content/locations
     view:
-      fields: [ title, draft, date ]
+      fields: [ title, draft, date, location ]
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Description, type: string }
       - { name: date, label: Date, type: date }
       - { name: draft, label: Draft, type: boolean }
       - { name: tags, label: Tags, type: string, list: true }
+      - name: location
+        label: Location
+        type: object
+        fields:
+          - { name: name, label: Location Name, type: string }
+          - { name: address, label: Address, type: string }
+          - { name: latitude, label: Latitude, type: number, step: 0.000001 }
+          - { name: longitude, label: Longitude, type: number, step: 0.000001 }
+          - { name: zoom, label: Map Zoom Level, type: number, default: 15 }
       - { name: body, label: Body, type: rich-text }
-  - name: follymaps-about
-    label: Follymaps About
-    type: file
-    path: content/pages/about.md
+  
+  # Static Pages - for about, contact, etc.
+  - name: pages
+    label: Pages
+    type: collection
+    path: content/pages
+    view:
+      fields: [ title, permalink ]
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Description, type: string }
-      - { name: permalink, label: Permalink, type: string }
+      - { name: permalink, label: Permalink, type: string, required: true }
       - { name: layout, label: Layout, type: string, default: layouts/base.njk }
       - { name: body, label: Body, type: rich-text }
+      
+  # Site Metadata
+  - name: metadata
+    label: Site Settings
+    type: file
+    path: _data/metadata.js
+    format: code
       
   - name: metadata
     label: Metadata
