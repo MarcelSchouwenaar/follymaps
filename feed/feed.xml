@@ -5,7 +5,7 @@
   <subtitle>This is a longer description about your blog.</subtitle>
   <link href="https://example.com/follymaps/feed/feed.xml" rel="self" />
   <link href="https://example.com/follymaps/" />
-  <updated>2026-02-02T10:25:03Z</updated>
+  <updated>2026-02-02T10:27:02Z</updated>
   <id>https://example.com/follymaps/</id>
   <author>
     <name>Your Name</name>
@@ -13,7 +13,7 @@
   <entry>
     <title>All Locations</title>
     <link href="https://example.com/follymaps/locations/" />
-    <updated>2026-02-02T10:25:03Z</updated>
+    <updated>2026-02-02T10:27:02Z</updated>
     <id>https://example.com/follymaps/locations/</id>
     <content type="html">&lt;p&gt;Explore all the locations we&#39;ve featured, from hidden gems to popular destinations. Each location includes detailed information and precise coordinates to help you plan your visit.&lt;/p&gt;
 </content>
@@ -37,5 +37,12 @@
 &lt;h2 id=&quot;best-time-to-visit&quot;&gt;Best Time to Visit&lt;/h2&gt;
 &lt;p&gt;Visit during spring and summer months for the best experience, when the park comes alive with locals and tourists enjoying the outdoors.&lt;/p&gt;
 </content>
+  </entry>
+  <entry>
+    <title>The middle of the ocean</title>
+    <link href="https://example.com/follymaps/locations/the-middle-of-the-ocean/" />
+    <updated>2026-02-02T00:00:00Z</updated>
+    <id>https://example.com/follymaps/locations/the-middle-of-the-ocean/</id>
+    <content type="html"></content>
   </entry>
 </feed>
